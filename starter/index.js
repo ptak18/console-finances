@@ -86,3 +86,50 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+
+
+//total number of months included in the dataset
+
+var columnTest = finances[0][0];
+
+var columnTest = finances[1][0];
+
+console.table[columnTest; columnTest]
+
+console.log(financial analysis)
+console.table(finances.length);
+
+//net totoal amount of profit and losses over entire period
+
+var netTotal = 0;
+for(let i=0; i< finances.length; i++){
+  netTotal += finaces [i][1];
+} 
+console.log (total inside loop ${netTotal})
+
+
+//average changes in profit and losses
+var avgProLoss = (netTotal/ (totalMonths - 1 ))
+console.log(avgProLoss);
+
+
+var total = 0
+for (const row of finances) {
+  total+= (row[1] -(row[1] +1))
+}
+console.log(total /totalMonths -1 )
+
+//console format
+console.log(financial analysis)
+
+//loop through 
+varTotal = 0;
+for(let i=0; i< Array.length; i++) {
+  Total += (fiances[i][1]-finances[i][1])
+}
+
+var averageChanges = total / (totalMonths - 1)
+
+total months: ${finances.length}
+Total: ${netTotal}
