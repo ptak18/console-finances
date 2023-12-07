@@ -86,6 +86,9 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+// // * The total number of months included in the dataset.
+// * The net total amount of Profit/Losses over the entire period.
+
 console.log("financial analysis")
 console.log("-------------")
 var numberMonths = finances.length
@@ -97,66 +100,32 @@ for(let i=0; i< numberMonths; i++){
 } 
 
 console.log("total: $",netTotal)
-
-changes = 0
-for (let index = 0; index < finances.length; index++) {
-  if (index > 0){
-    changes += finances[index][1]-finances[index-1][1]
-  }
-}
-console.log(changes/numberMonths)
-//  
-// console.log (total inside loop ${netTotal})
-
-
-// //average changes in profit and losses
-// var avgProLoss = (netTotal/ (totalMonths - 1 ))
-// console.log(avgProLoss);
-
-
-// var total = 0
-// for (const row of finances) {
-//   total+= (row[1] -(row[1] +1))
-// }
-// console.log(total /totalMonths -1 )
-
-// //console format
-// console.log(financial analysis)
-
-// //loop through 
-// varTotal = 0;
-// for(let i=0; i< Array.length; i++) {
-//   Total += (fiances[i][1]-finances[i][1])
-// }
-
-// var averageChanges = total / (totalMonths - 1)
-
-// total months: ${finances.length}
-// Total: ${netTotal}
-
-// ## Instructions
-
-// 1. Create a new GitHub repo called `Console-Finances`. Then, clone it to your computer.
-
-// 2. Copy the starter files in your local git repository.
-
-// You have been given a dataset composed of arrays with two fields, Date and Profit/Losses.
-
-// Your task is to write JavaScript code that analyzes the records to calculate each of the following:
-
-// * The total number of months included in the dataset.
-
-// * The net total amount of Profit/Losses over the entire period.
-
 // * The average of the **changes** in Profit/Losses over the entire period.
 //   * You will need to track what the total change in Profit/Losses are from month to month and then find the average.
 //   * (`Total/(Number of months - 1)`)
+var changes = 0
+var greatestLoss = 0
+var greatestGain = 0
+for (let index = 0; index < finances.length; index++) {
+  if (index > 0){
+    changes += finances[index][1]-finances[index-1][1]
+    if (finances[index][1]-finances[index-1][1] < greatestLoss  ){
+      greatestLoss = finances[index][1]-finances[index-1][1]
+
+    }
+    if (finances[index][1]-finances[index-1][1] > greatestGain){
+     greatestGain = finances[index][1]-finances[index-1][1]
+    }
+  }
+}
+console.log("Average Change: ", changes / (numberMonths - 1))
+console.log("greatest Loss: $", greatestLoss)
+console.log("greatest Gain: $", greatestGain)
 
 // * The greatest increase in Profit/Losses (date and amount) over the entire period.
 
 // * The greatest decrease in Profit/Losses (date and amount) over the entire period.
 
-// When you open your code in the browser your resulting analysis should look similar to the following:
 
 //   ```text
 //   Financial Analysis 
