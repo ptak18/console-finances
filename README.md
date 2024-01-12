@@ -5,11 +5,12 @@
 This project demonstrates the application of JavaScript fundamentals to analyze financial data. It involves calculating key metrics from a provided dataset and presenting the results in a clear and concise format.
 
 # Preview
-![preview screenshot](/consolelogpreview.png) 
+![preview screenshot](./consolelogpreview.png) 
+
 - This screenshot shows the preview(expected output) with regards to questions asked from the challenge. 
 
 # Getting Started 
-- Live link: http://127.0.0.1:5501/console-finances/index.html
+- Live link: https://ptak18.github.io/console-finances/
 - Github repository: https://github.com/ptak18/console-finances
 
 # Usage
